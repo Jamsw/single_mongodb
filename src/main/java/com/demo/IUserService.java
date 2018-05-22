@@ -1,5 +1,7 @@
 package com.demo;
 
+import org.springframework.data.domain.Page;
+
 import java.util.List;
 
 /**
@@ -20,4 +22,6 @@ public interface IUserService {
     public List<Users> listUser();
 
     List<Users> getGroup(String companyName);
+
+    Page<Users> paginationQuery(Integer pageNum,Integer pageSize);
 }
